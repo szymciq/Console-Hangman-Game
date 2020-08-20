@@ -9,6 +9,13 @@
 #include "word.h"
 #include "wordList.h"
 
+enum GameDifficulty 
+{
+	EASY,
+	MEDIUM, 
+	HARD
+};
+
 class Game
 {
 private:
@@ -21,10 +28,12 @@ public:
 private:
 	void newGame();
 	char getLetterFromUser();
+	GameDifficulty askAboutDifficultyLevel();
+	bool askToPlayAgain(); 
 	void clearScreen();
 	void showGameBoard();
 	void gameWon();
-	void gamyLost();
+	void gameLost();
 	bool isGameLost();
 	bool isGameWon();
 };
