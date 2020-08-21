@@ -6,6 +6,7 @@
 
 class WordList
 {
+friend class Game;
 private:
     std::vector<std::string> wordList;
 public:
