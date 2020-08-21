@@ -22,20 +22,23 @@ private:
 	Word word;
 	int remainingChances;
 	WordList wordList;
-	std::set<std::string> givenLetters;
+	std::set<std::string> usedLetters;
+	GameDifficulty gameDifficulty;
 public:
-	Game(const WordList& wordlist, int remainingChances = START_CHANCES);
+	Game(const WordList& wordlist);
+	void play();
 private:
 	void newGame();
-	char getLetterFromUser();
-	GameDifficulty askAboutDifficultyLevel();
-	bool askToPlayAgain(); 
-	void clearScreen();
-	void showGameBoard();
+	GameDifficulty askAboutDifficultyLevel() const;
+	std::string getRandomWord() const;
+	char getLetterFromUser() const;
+	bool askToPlayAgain() const;
+	void clearScreen() const;
+	void showGameBoard() const;
 	void gameWon();
 	void gameLost();
-	bool isGameLost();
-	bool isGameWon();
+	bool isGameLost() const;
+	bool isGameWon() const;
 };
 
 #endif
