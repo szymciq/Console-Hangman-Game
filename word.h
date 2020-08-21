@@ -9,6 +9,7 @@
 using LetterWithVisibility = std::pair<char, bool>;
 class Word 
 {
+friend class Game;
 private:
 	std::vector<LetterWithVisibility> word;
 public:
@@ -19,6 +20,8 @@ public:
 	void showLetter(const char letter);
 	void showAllLetters();
 	std::string getWord() const;
+private:
+	Word() { };
 };
 
 #endif
