@@ -161,3 +161,13 @@ std::string Word::getWord() const
 	}
 	return word;
 }
+
+Word Word::operator=(const Word& word)
+{
+	this->word.clear();
+	for (auto LWV : word.word)
+	{
+		this->word.push_back(LWV);
+	}
+	return *this;
+}

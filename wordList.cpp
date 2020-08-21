@@ -51,3 +51,9 @@ WordList WordList::loadFromFile(const std::string& filename)
         return WordList(wordsFromFile);
     }
 }
+
+WordList WordList::operator=(const WordList& wordList)
+{
+    this->wordList = wordList.wordList;
+    return *this;
+}

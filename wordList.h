@@ -16,6 +16,7 @@ public:
     std::string getWord(int index) const;
     void addWord(const std::string& word);
     static WordList loadFromFile(const std::string& filename);
+    WordList operator=(const WordList& wordList);
 private:
     WordList() { };
 };

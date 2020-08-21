@@ -20,6 +20,7 @@ public:
 	void showLetter(const char letter);
 	void showAllLetters();
 	std::string getWord() const;
+	Word operator=(const Word& word);
 private:
 	Word() { };
 };
