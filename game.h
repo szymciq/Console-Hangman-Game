@@ -22,7 +22,7 @@ private:
 	Word word;
 	int remainingChances;
 	WordList wordList;
-	std::set<std::string> usedLetters;
+	std::set<char> usedLetters;
 	GameDifficulty gameDifficulty;
 public:
 	Game(const WordList& wordlist);
@@ -31,6 +31,7 @@ private:
 	void newGame();
 	GameDifficulty askAboutDifficultyLevel() const;
 	std::string getRandomWord() const;
+	bool isGameInProgress() const;
 	char getLetterFromUser() const;
 	bool askToPlayAgain() const;
 	void clearScreen() const;
@@ -39,6 +40,7 @@ private:
 	void gameLost();
 	bool isGameLost() const;
 	bool isGameWon() const;
+	void showMessageWhenGameIsOver();
 };
 
 #endif
