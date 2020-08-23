@@ -146,7 +146,7 @@ void Word::showLetter(const char letter)
 
 void Word::showAllLetters()
 {
-	for (auto letter : word)
+	for (auto& letter : word)
 	{
 		letter.second = true;
 	}
