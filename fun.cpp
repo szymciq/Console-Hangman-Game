@@ -1,5 +1,6 @@
 #include "fun.h"
-
+#include <iostream>
+#include <string>
 char getChar() {
     std::string input;
     std::getline(std::cin, input);

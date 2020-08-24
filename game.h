@@ -25,7 +25,7 @@ private:
 	std::set<char> usedLetters;
 	GameDifficulty gameDifficulty;
 public:
-	Game(const WordList& wordlist);
+	Game(const WordList& wordList);
 	void play();
 private:
 	void newGame();
